@@ -1,4 +1,7 @@
-from .db import DB
+
+__import__('pkg_resources').declare_namespace(__name__)
+
+# from .db import DB
 
 def server(path=None, blob_dir=None, storage_conf=None, zeo_conf=None,
            port=0, threaded=True, **kw):

@@ -8,7 +8,7 @@ import tempfile
 from distutils import ccompiler, log
 from setuptools import setup, find_packages
 
-version = '0.99.0b1'
+version = '1.00.0b1'
 
 INSTALL_REQUIRES = [
     'BTrees',
@@ -172,4 +172,5 @@ setup(
     install_requires=INSTALL_REQUIRES,
     extras_require={'testing': TESTS_REQUIRE},
     entry_points=entry_points,
+    namespace_packages=['zerodb'],
 )

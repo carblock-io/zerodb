@@ -1,10 +1,9 @@
 from zerodb.collective.indexing.queue import getQueue
+from zope.event import subscribers
 from zope.lifecycleevent.interfaces import IObjectModifiedEvent
 from zope.lifecycleevent import ObjectModifiedEvent
-from zope.event import subscribers
 
 from zerodb.models import Model
-
 
 def zerodb_autoreindex_dispatcher(event):
     if isinstance(event, ObjectModifiedEvent) and isinstance(event.object, Model):
